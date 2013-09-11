@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  resource_a_id: 1
+  resource_b_id: 1
+  type: 
+
+two:
+  resource_a_id: 1
+  resource_b_id: 1
+  type: 
