@@ -1,7 +1,49 @@
-%header.container
-  %h1 App name
-  %h2 Tag line
+#content-header
+  .container
+    .row
+      .col-md-6
+        %h1 AppName
+        %h2 Tag line
 
-#content
-  %p#intro
-    Paragraph introducing a catchy tagline.
+        %p#headline
+          This is a catchy headline!
+        %p#intro
+          Here’s some text that briefly describs the product’s intended market and 
+          how it helps. This should give enough info for users to want to 
+          %a(href="#")read more &raquo;
+
+        %h3 Get in on the action!
+        %p
+          We’re not quite ready, but get on the list, and we’ll let you in as soon
+          as we can.
+
+        .row
+          = simple_form_for @signup, html: {class: 'form-inline'} do |f|
+            .col-md-8
+              = f.input_field :email, placeholder: 'Email address', class: 'form-control'
+            .col-md-4
+              = f.submit 'Sign up!', class: 'btn btn-primary'
+      .col-md-6
+        %img(src="screenshot.png")
+
+#features.container
+  .row
+    .col-md-8
+      %h3 Features
+  .row
+    %ul.list-unstyled
+      %li.col-md-4
+        %h4 Easy
+        %p
+          Veggies sunt bona vobis, proinde vos postulo esse magis collard greens 
+          seakale quandong chicory corn radish bamboo shoot welsh onion.
+      %li.col-md-4
+        %h4 Fast
+        %p
+          Courgette spinach bok choy shallot dandelion lotus root salad turnip. 
+          Chickpea squash green bean mung bean eggplant endive potato lotus root.
+      %li.col-md-4
+        %h4 Secure
+        %p
+          Fennel water chestnut courgette celery gram parsnip catsear mustard 
+          maize carrot sweet pepper napa cabbage artichoke.
