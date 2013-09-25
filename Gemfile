@@ -12,6 +12,7 @@ gem 'devise'
 gem 'cancan'
 gem 'simple_form'
 gem 'inherited_resources'
+gem 'will_paginate', '~> 3.0'
 
 group :production do
   gem 'sqlite3'

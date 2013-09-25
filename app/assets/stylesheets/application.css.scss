@@ -13,6 +13,16 @@
  *= require bootstrap
  */
 
+#new_signup.form-inline {
+  & > div {
+    display: inline;
+  }
+
+  #signup_email {
+    width: 60%;
+  }
+}
+
 footer {
   margin-top: 80px;
 }

@@ -1,6 +1,6 @@
 class SignupsController < InheritedResources::Base
 
-  actions :create, :index, :new
+  actions :create, :new
 
   def create
     create! do |success, failure|

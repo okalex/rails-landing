@@ -1,0 +1,3 @@
+= simple_form_for @signup, html: {class: 'form-inline'} do |f|
+  = f.input :email, label: false, placeholder: 'Email address', input_html: {class: 'form-control'}
+  = f.submit 'Sign up!', class: 'btn btn-primary'
