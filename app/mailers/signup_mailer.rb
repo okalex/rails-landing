@@ -3,7 +3,7 @@ class SignupMailer < ActionMailer::Base
 
   def welcome_email(signup)
     @signup = signup
-    mail(to: @signup.email, subject: 'Welcome to My Awesome Site')
+    mail(to: @signup.email, subject: 'AppName.io loves you!')
   end
 
 end

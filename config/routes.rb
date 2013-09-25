@@ -2,6 +2,7 @@ Web::Application.routes.draw do
 
   root 'home#index'
   get 'thanks' => 'home#thanks'
+  get 'pricing' => 'home#pricing'
 
   get 'signup' => 'signups#new'
   resources 'signups', only: ['new', 'create']
