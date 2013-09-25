@@ -4,10 +4,9 @@ Web::Application.routes.draw do
   get 'thanks' => 'home#thanks'
 
   get 'signup' => 'signups#new'
-  get 'signups/new' => 'signups#new'
-  post 'signups' => 'signups#create'
+  resources 'signups', only: ['new', 'create']
   namespace :admin do
-    get 'signups' => 'signups#index'
+    resources 'signups', only: ['index', 'destroy']
   end
 
   devise_for :users

@@ -1,6 +1,7 @@
 class Admin::SignupsController < Admin::AdminController
 
-  actions :index
+  defaults :resource_class => Signup, :collection_name => 'signups', :instance_name => 'signup'
+  actions :index, :destroy
 
   protected
 

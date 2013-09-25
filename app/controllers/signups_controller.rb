@@ -4,8 +4,14 @@ class SignupsController < InheritedResources::Base
 
   def create
     create! do |success, failure|
-      success.html { redirect_to thanks_url }
-      failure.html { redirect_to signup_url }
+      success.html do
+        SignupMailer.welcome_email(@signup).deliver
+        redirect_to thanks_url
+      end
+
+      failure.html do
+        redirect_to signup_url
+      end
     end
   end
 
