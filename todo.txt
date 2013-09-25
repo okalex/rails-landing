@@ -1,6 +1,6 @@
-(A) 2013-09-24 Restrict access to signups to admin user
 (A) 2013-09-24 Make signup errors visible
 (A) 2013-09-24 Send thank you email
 (B) 2013-09-24 Implement split testing (https://github.com/andrew/split)
 (B) 2013-09-24 Set up private beta questionnaire (https://github.com/NUBIC/surveyor)
 (C) 2013-09-24 Implement traffic analytics
+x (A) 2013-09-24 Restrict access to signups to admin user
