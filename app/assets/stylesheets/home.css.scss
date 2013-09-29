@@ -2,3 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 18px;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Raleway', serif;
+  font-weight: bold;
+}
+
+footer {
+  background: #222;
+  color: #ddd;
+  font-size: 14px;
+  padding: 20px 0;
+}

@@ -1,5 +1,12 @@
 %h2 Sign up
 
+.container
+  - if user_signed_in?
+    - unless notice.nil?
+      .notice= notice
+    - unless alert.nil?
+      .alert= alert
+
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = f.error_notification
 

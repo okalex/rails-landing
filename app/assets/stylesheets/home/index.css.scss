@@ -1,0 +1,118 @@
+.section-header {
+  color: #48a;
+  font-size: 32px;
+  margin-bottom: 1em;
+  margin-top: 30px;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 30, 100, 0.8);
+}
+
+.btn.call-to-action {
+  background-color: #48a;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+  color: white;
+  font-size: 24px;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+#content-header {
+  background: url(/assets/computers_bg.jpg) top center;
+  color: white;
+  font-size: 18px;
+
+  h1, h2 {
+    color: #48a;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 30, 100, 0.8);
+  }
+  h2 {
+    color: #E46964;
+    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  }
+
+  #signup-btn {
+    margin-top: 40px;
+    text-align: center;
+
+  }
+
+  .screenshot {
+    height: 100px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    transition: all .2s ease-in-out;
+    width: 600px;
+
+    &:hover {
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      height: 500px;
+      margin-top: -200px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+#description {
+  background-color: #eee;
+  font-size: 24px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#features {
+  li {
+    position: relative;
+
+    h4 { text-align: center; }
+
+    .glyphicon {
+      color: #eee;
+      font-size: 128px;
+      left: 50%;
+      margin-left: -.5em;
+      margin-top: 10px;
+      position: absolute;
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+  }
+}
+
+#pricing {
+}
+
+#testimonials {
+  padding-top: 40px;
+
+  ul li {
+    overflow: hidden;
+
+    img {
+      border-radius: 64px;
+      float: left;
+    }
+    .quote, .attribution {
+      margin-left: 138px;
+    }
+    .quote {
+      color: #888;
+      font-style: italic;
+      margin-top: 10px;
+    }
+    .attribution {
+      text-align: right;
+    }
+  }
+}
+
+.callout {
+}

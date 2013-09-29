@@ -1,44 +1,129 @@
-#content-header
+- content_for :javascript_includes do
+  = javascript_include_tag 'parallax.js'
+
+#content-header.parallax(data-scroll-speed="0.5")
+  = render 'shared/nav'
+
   .container
     .row
-      .col-md-6
+      .col-md-12
         %h1 AppName
-        %h2 Tag line
+        %h2 This is a really catchy tagline. Guaranteed.
+    .row
+      .col-md-12
+        #signup-btn
+          %a.btn.call-to-action(href="#") Sign up now!
+        -#.signup-form
+          -#%h3 Get in on the action!
+          -#%p
+            -#We’re not quite ready, but get on the list, and we’ll let you in as soon
+            -#as we can.
+          -#= render 'signups/form'
+    .row
+      .col-md-12
+        .screenshot
+          %img(src="/assets/screen.png")
 
-        %p#headline
-          This is a catchy headline!
+#description
+  .container
+    .row
+      .col-md-8.col-md-offset-2
         %p#intro
-          Here’s some text that briefly describs the product’s intended market and 
+          Here’s some text that describes the market and 
           how it helps. This should give enough info for users to want to 
           %a(href="#")read more &raquo;
 
-        %h3 Get in on the action!
-        %p
-          We’re not quite ready, but get on the list, and we’ll let you in as soon
-          as we can.
+#features
+  .container
+    .row
+      .col-md-12
+        %h3.section-header Features
+    .row
+      %ul.list-unstyled
+        %li.col-md-4
+          .glyphicon.glyphicon-thumbs-up
+          %h4 Easy
+          %p
+            Veggies sunt bona vobis, proinde vos postulo esse magis collard greens 
+            seakale quandong chicory corn radish bamboo shoot welsh onion.
+        %li.col-md-4
+          .glyphicon.glyphicon-flash
+          %h4 Fast
+          %p
+            Courgette spinach bok choy shallot dandelion lotus root salad turnip. 
+            Chickpea squash green bean mung bean eggplant endive potato lotus root.
+        %li.col-md-4
+          .glyphicon.glyphicon-lock
+          %h4 Secure
+          %p
+            Fennel water chestnut courgette celery gram parsnip catsear mustard 
+            maize carrot sweet pepper napa cabbage artichoke.
 
-        = render 'signups/form'
+#pricing
+  .container
+    .row
+      .col-md-12
+        %h3.section-header Plans &amp; pricing
+    .row
+      .col-md-8.col-md-offset-2
+        = render 'pricing'
+
+#testimonials
+  .container
+    .row
+      .col-md-12
+        %h3.section-header And people love us…
+    .row
+      %ul.list-unstyled
+        %li.col-md-5.col-md-offset-1
+          %img(src="/assets/headshot_1.jpg")
+          %p.quote Courgette spinach bok choy shallot dandelion lotus root salad turnip.
+          %p.attribution - Dustin moskovitz, Facebook
+        %li.col-md-5
+          %img(src="/assets/headshot_2.jpg")
+          %p.quote Courgette spinach bok choy shallot dandelion lotus root salad turnip.
+          %p.attribution - Rheince Priebus, GOP
+
+#news
+  .container
+    .row
+      .col-md-12
+        %h3.section-header Around the web
+    .row
       .col-md-6
-        %img(src="screenshot.png")
+        %h4 From the blog
+        %ul
+          %li
+            .title How Company X uses AppName to improve productivity 200%
+            .date Sep. 23rd
+          %li
+            .title The end of the beginning
+            .date Sep. 20th
+          %li
+            .title Wait… what?
+            .date Sep. 18th
+      .col-md-6
+        %h4 Press coverage
+        %ul
+          %li
+            .title
+              %a(href="#") AppName wins best-in-class at ComicCon
+            .source (GigaOm)
+          %li
+            .title
+              %a(href="#") AppName aims to be the future of productivity software
+            .source (AllThingsD)
+          %li
+            .title
+              %a(href="#") Is this web 3.0?
+            .source (TechCrunch)
 
-#features.container
-  .row
-    .col-md-8
-      %h3 Features
-  .row
-    %ul.list-unstyled
-      %li.col-md-4
-        %h4 Easy
-        %p
-          Veggies sunt bona vobis, proinde vos postulo esse magis collard greens 
-          seakale quandong chicory corn radish bamboo shoot welsh onion.
-      %li.col-md-4
-        %h4 Fast
-        %p
-          Courgette spinach bok choy shallot dandelion lotus root salad turnip. 
-          Chickpea squash green bean mung bean eggplant endive potato lotus root.
-      %li.col-md-4
-        %h4 Secure
-        %p
-          Fennel water chestnut courgette celery gram parsnip catsear mustard 
-          maize carrot sweet pepper napa cabbage artichoke.
+#last-call
+  .container
+    .row
+      .col-md-12
+        .callout
+          %p
+            We&apos;re not quite ready, but sign up and we&apos;ll let you 
+            know as soon as we launch!
+          %a.btn.call-to-action(href="#") Sign up now!
