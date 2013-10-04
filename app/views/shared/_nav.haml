@@ -1,25 +1,38 @@
 %header.navbar.transparent.navbar-top(role="navigation")
   .container
-    .navbar-header
-      %a.navbar-brand(href="/")
-        <b>AppName</b>.io
+    .row
+      .col-md-12
+        .navbar-header
+          %a.navbar-brand(href="/")
+            <b>AppName</b>.io
 
-    - if user_signed_in?
-      .collapse.navbar-collapse.navbar-ex1-collapse
         %ul.nav.navbar-nav.navbar-right
-          %li
-            = link_to "Log out", destroy_user_session_url, method: :delete
-    - else
-      .collapse.navbar-collapse.navbar-ex1-collapse
-        %ul.nav.navbar-nav.navbar-right
-          %li
-            %a(href="/") Learn more
-          %li
-            %a(href="/") Pricing
-          %li
-            %a(href="/") Blog
-        -#%ul.nav.navbar-nav.navbar-right
-          -#%li
-            -#%a(href="#{new_user_registration_path}") Sign up
-          -#%li
-            -#%a(href="#{new_user_session_path}") Login
+          - if user_signed_in?
+            %li
+              = link_to "Log out", destroy_user_session_url, method: :delete
+          - else
+            %li
+              %a.page-nav(href="#features") Features
+            %li
+              %a.page-nav(href="#pricing") Pricing
+            %li
+              %a.page-nav(href="#testimonials") Testimonials
+            %li
+              %a.page-nav(href="#news") News
+            %li
+              %a.page-nav(href="#signup") Sign up
+
+:javascript
+  $('.page-nav').click(function() {
+    var navHeight = $(this).outerHeight();
+    var target = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(target).offset().top - navHeight
+    }, 300, 'swing');
+    if (target == '#signup') {
+    console.log(target);
+      $(target).find('#signup_email').focus();
+    }
+    return false;
+  });
+

@@ -3,15 +3,9 @@
   %head
     %title Web
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = yield :javascript_includes
-    %script(src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js")
-    :javascript
-      WebFont.load({
-        google: {
-          families: ['Raleway:400,700,900:latin', 'Roboto Slab']
-        }
-      });
     = csrf_meta_tags
 
   %body

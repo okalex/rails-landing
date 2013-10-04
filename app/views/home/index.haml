@@ -1,18 +1,18 @@
 - content_for :javascript_includes do
   = javascript_include_tag 'parallax.js'
 
-#content-header.parallax(data-scroll-speed="0.5")
+%section#content-header.parallax(data-scroll-speed="0.5")
   = render 'shared/nav'
 
-  .container
+  .hero.container
     .row
       .col-md-12
-        %h1 AppName
+        %h1 AppName.io
         %h2 This is a really catchy tagline. Guaranteed.
     .row
       .col-md-12
-        #signup-btn
-          %a.btn.call-to-action(href="#") Sign up now!
+        #signup
+          = render 'signups/form'
         -#.signup-form
           -#%h3 Get in on the action!
           -#%p
@@ -24,7 +24,7 @@
         .screenshot
           %img(src="/assets/screen.png")
 
-#description
+%section#description
   .container
     .row
       .col-md-8.col-md-offset-2
@@ -33,7 +33,7 @@
           how it helps. This should give enough info for users to want to 
           %a(href="#")read more &raquo;
 
-#features
+%section#features
   .container
     .row
       .col-md-12
@@ -59,7 +59,7 @@
             Fennel water chestnut courgette celery gram parsnip catsear mustard 
             maize carrot sweet pepper napa cabbage artichoke.
 
-#pricing
+%section#pricing
   .container
     .row
       .col-md-12
@@ -68,7 +68,7 @@
       .col-md-8.col-md-offset-2
         = render 'pricing'
 
-#testimonials
+%section#testimonials
   .container
     .row
       .col-md-12
@@ -84,7 +84,7 @@
           %p.quote Courgette spinach bok choy shallot dandelion lotus root salad turnip.
           %p.attribution - Rheince Priebus, GOP
 
-#news
+%section#news
   .container
     .row
       .col-md-12
@@ -118,7 +118,7 @@
               %a(href="#") Is this web 3.0?
             .source (TechCrunch)
 
-#last-call
+%section#last-call
   .container
     .row
       .col-md-12
@@ -126,4 +126,4 @@
           %p
             We&apos;re not quite ready, but sign up and we&apos;ll let you 
             know as soon as we launch!
-          %a.btn.call-to-action(href="#") Sign up now!
+          = render 'signups/form'

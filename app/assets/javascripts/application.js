@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+
+WebFont.load({
+  google: {
+    families: ['Raleway:400,700,900:latin', 'Share:400,700:latin', 'Roboto Slab']
+  }
+});
